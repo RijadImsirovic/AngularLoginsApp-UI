@@ -1,0 +1,72 @@
+.logins {
+    margin: 20px;
+  }
+  
+  .logins h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .filter-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .mat-elevation-z8 {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .mat-header-cell {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .mat-row:hover {
+    background-color: #d3d3d3;
+  }
+  
+  .mat-paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .mat-paginator .mat-paginator-navigation {
+    background-color: #007bff;
+  }
+  
+  .mat-paginator .mat-paginator-navigation:hover {
+    background-color: #0056b3;
+  }
+  
+  .mat-paginator .mat-select-arrow {
+    color: #007bff;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .mat-form-field.mat-focused .mat-form-field-underline {
+    background-color: #007bff;
+  }

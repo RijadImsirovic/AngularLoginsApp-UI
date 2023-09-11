@@ -1,0 +1,41 @@
+<mat-card class="register-container">
+    <mat-card-content>
+      <div class="reg-form-container">
+        <h1>Add a new user</h1>
+        <p>Enter new user info</p>
+        <form class="register">
+          <mat-form-field class="register-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput [formControl]="username" required />
+          </mat-form-field>
+          <mat-form-field class="register-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [formControl]="email" required />
+          </mat-form-field>
+          <mat-form-field class="register-full-width">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              [formControl]="password"
+              required
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>
+  
+        <button mat-flat-button color="primary" (click)="Register(registerDto)">
+          Create
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

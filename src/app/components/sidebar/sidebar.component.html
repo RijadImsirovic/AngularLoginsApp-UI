@@ -1,0 +1,12 @@
+<mat-drawer-container class="nav-container" autosize>
+  <mat-drawer class="side-nav" #drawer>
+    <mat-list role="list">
+      <mat-list-item class="nav-list" role="listitem" routerLink="/Users">Users Page</mat-list-item>
+      <mat-list-item class="nav-list" role="listitem" routerLink="/Logins">Logins Page</mat-list-item>
+      <mat-list-item class="nav-list" role="listitem"><button class="sign-out" mat-raised-button color="primary" (click)="signOut()">Sign out</button></mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button mat-raised-button (click)="drawer.toggle()"><mat-icon class="menu-icon">menu</mat-icon></button>
+  </mat-drawer-content>
+</mat-drawer-container>

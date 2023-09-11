@@ -2,20 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { LoginsSearchRequest } from '../models/loginsSearchRequest';
-import { LoginsSearchResponse } from '../models/loginsSearchResponse';
+import { SearchRequest } from '../models/searchRequest';
+import { UsersSearchResponse } from '../models/usersSearchResponse';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LoginsService {
-  private logins = 'Logins';
+export class UsersService {
+  private applicationUserUrl = 'ApplicationUser';
 
   constructor(private http: HttpClient) {}
 
-  public search(req: LoginsSearchRequest): Observable<LoginsSearchResponse> {
-    return this.http.get<LoginsSearchResponse>(
-      `${environment.apiUrl}/${this.logins}/search?query=${req.query.toString()}
+  public search(req: SearchRequest): Observable<UsersSearchResponse> {
+    return this.http.get<UsersSearchResponse>(
+      `${environment.apiUrl}/${this.applicationUserUrl}/search?query=${req.query.toString()}
                                                               &page=${req.page}
                                                               &pageSize=${req.pageSize}
                                                               &sortColumn=${req.sortColumn}
